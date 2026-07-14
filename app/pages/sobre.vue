@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const siteUrl = 'https://xNaando.github.io/treinos-fit-SSG'
+const siteUrl = 'https://treinosfit.shop'
 
 useSeo({
   title: 'Sobre - Treinos em Casa',

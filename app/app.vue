@@ -1,25 +1,32 @@
 <template>
   <div class="site">
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
     <header class="header">
       <nav class="nav" aria-label="Navegação principal">
         <NuxtLink to="/" class="logo" aria-label="Treinos em Casa - Início">
           <span class="logo-icon">💪</span>
           <span>Treinos em Casa</span>
         </NuxtLink>
-        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" @click="toggleMenu">
+        <button
+          class="menu-toggle"
+          :aria-label="menuOpen ? 'Fechar menu' : 'Abrir menu'"
+          :aria-expanded="menuOpen"
+          aria-controls="menu-links"
+          @click="toggleMenu"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div class="links" :class="{ open: menuOpen }" role="menubar">
-          <NuxtLink to="/" role="menuitem">Início</NuxtLink>
-          <NuxtLink to="/treinos" role="menuitem">Treinos</NuxtLink>
-          <NuxtLink to="/sobre" role="menuitem">Sobre</NuxtLink>
+        <div id="menu-links" class="links" :class="{ open: menuOpen }" role="menubar">
+          <NuxtLink to="/" role="menuitem" @click="menuOpen = false">Início</NuxtLink>
+          <NuxtLink to="/treinos" role="menuitem" @click="menuOpen = false">Treinos</NuxtLink>
+          <NuxtLink to="/sobre" role="menuitem" @click="menuOpen = false">Sobre</NuxtLink>
           <CheckoutButton class="header-btn">Comprar agora</CheckoutButton>
         </div>
       </nav>
     </header>
-    <main id="main" class="main">
+    <main id="main" class="main" tabindex="-1">
       <NuxtPage />
     </main>
     <footer class="footer">
@@ -64,6 +71,23 @@ function toggleMenu() {
 
 html {
   scroll-behavior: smooth;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 100;
+  transition: top 0.2s;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
 }
 
 body {

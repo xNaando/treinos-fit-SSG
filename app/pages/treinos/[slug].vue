@@ -2,7 +2,7 @@
 import { treinos } from '~/data/treinos'
 
 const route = useRoute()
-const siteUrl = 'https://xNaando.github.io/treinos-fit-SSG'
+const siteUrl = 'https://treinosfit.shop'
 const treino = treinos.find(t => t.slug === route.params.slug)
 
 if (!treino) {
@@ -13,7 +13,8 @@ useSeo({
   title: `${treino.titulo} - Treino em Casa`,
   description: treino.descricao,
   path: `/treinos/${treino.slug}`,
-  image: treino.imagem
+  image: treino.imagem,
+  type: 'article'
 })
 
 useJsonLd({

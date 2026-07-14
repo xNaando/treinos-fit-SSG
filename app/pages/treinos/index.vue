@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { treinos } from '~/data/treinos'
 
-const siteUrl = 'https://xNaando.github.io/treinos-fit-SSG'
+const siteUrl = 'https://treinosfit.shop'
 
 useSeo({
   title: 'Treinos em Casa - Escolha seu Treino Ideal',
