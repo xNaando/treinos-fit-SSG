@@ -70,7 +70,7 @@ export const treinos: Treino[] = [
     descricao: 'Sessão de recuperação para relaxar e melhorar a amplitude de movimento.',
     nivel: 'Iniciante',
     duracao: '15 minutos',
-    imagem: 'https://images.unsplash.com/photo-1544367563-12123d8965cd?auto=format&fit=crop&w=800&q=80',
+    imagem: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
     altImagem: 'Mulher alongando o corpo em casa após o treino',
     exercicios: [
       { nome: 'Alongamento de panturrilha', series: '2x30s', descanso: '10s' },
