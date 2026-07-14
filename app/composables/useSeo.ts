@@ -1,5 +1,5 @@
 export function useSeo(options: { title: string; description: string; path?: string; image?: string }) {
-  const baseUrl = 'https://xNaando.github.io/treinos-fit-SSG'
+  const baseUrl = 'https://treinosfit.shop'
   const fullPath = options.path ? `${baseUrl}${options.path}` : baseUrl
 
   const meta = [

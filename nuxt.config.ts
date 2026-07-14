@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   app: {
-    baseURL: '/treinos-fit-SSG/',
+    baseURL: '/',
     head: {
       titleTemplate: '%s | Treinos em Casa',
       htmlAttrs: { lang: 'pt-BR' },
