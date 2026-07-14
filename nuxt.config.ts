@@ -15,7 +15,8 @@ export default defineNuxtConfig({
         { property: 'og:locale', content: 'pt_BR' },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'robots', content: 'index, follow' }
+        { name: 'robots', content: 'index, follow' },
+        { name: 'google-site-verification', content: 'mzeuqWFNhyFJVuXbUVSfTpeKR9P8QG7yuNKTt114v8c' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
