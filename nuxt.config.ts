@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
   app: {
+    baseURL: '/treinos-fit-SSG/',
     head: {
       titleTemplate: '%s | Treinos em Casa',
       htmlAttrs: { lang: 'pt-BR' },
@@ -13,5 +14,8 @@ export default defineNuxtConfig({
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     }
+  },
+  nitro: {
+    preset: 'static'
   }
 })
