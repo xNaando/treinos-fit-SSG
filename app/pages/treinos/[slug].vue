@@ -21,6 +21,11 @@ useHead({ title: treino.titulo })
     </p>
     <p class="descricao">{{ treino.descricao }}</p>
 
+    <div class="cta">
+      <p>Quer um plano completo com esse e muitos outros treinos?</p>
+      <CheckoutButton />
+    </div>
+
     <h2>Exercícios</h2>
     <ul class="exercicios">
       <li v-for="(exercicio, index) in treino.exercicios" :key="index" class="card">
@@ -65,6 +70,19 @@ useHead({ title: treino.titulo })
 .descricao {
   font-size: 1.125rem;
   margin-bottom: 2rem;
+}
+
+.cta {
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+}
+
+.cta p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
 }
 
 .exercicios {

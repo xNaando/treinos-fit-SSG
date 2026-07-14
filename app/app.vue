@@ -7,6 +7,7 @@
           <NuxtLink to="/">Início</NuxtLink>
           <NuxtLink to="/treinos">Treinos</NuxtLink>
           <NuxtLink to="/sobre">Sobre</NuxtLink>
+          <CheckoutButton class="header-btn">Comprar agora</CheckoutButton>
         </div>
       </nav>
     </header>
@@ -73,6 +74,12 @@ body {
 .links a:hover,
 .links a.router-link-active {
   color: var(--color-accent);
+}
+
+.header-btn {
+  margin-left: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
 }
 
 .main {

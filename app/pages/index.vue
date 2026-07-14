@@ -11,6 +11,10 @@ useHead({ title: 'Início' })
       Sem academia, sem equipamento e sem desculpas. Escolha um treino e comece hoje mesmo.
     </p>
     <NuxtLink to="/treinos" class="btn">Ver treinos</NuxtLink>
+    <div class="cta">
+      <p>Quer um programa completo e resultados acelerados?</p>
+      <CheckoutButton />
+    </div>
   </section>
 
   <section class="destaques">
@@ -49,6 +53,19 @@ useHead({ title: 'Início' })
 
 .destaques h2 {
   margin-bottom: 1rem;
+}
+
+.cta {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+}
+
+.cta p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
 }
 
 .meta {

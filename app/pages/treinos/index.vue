@@ -8,6 +8,10 @@ useHead({ title: 'Treinos' })
   <section>
     <h1>Todos os treinos</h1>
     <p class="intro">Escolha o treino ideal para o seu nível e objetivo.</p>
+    <div class="cta">
+      <p>Quer acesso a todos os treinos organizados em um plano completo?</p>
+      <CheckoutButton />
+    </div>
     <div class="grid">
       <article v-for="treino in treinos" :key="treino.slug" class="card">
         <h2>{{ treino.titulo }}</h2>
@@ -25,7 +29,20 @@ useHead({ title: 'Treinos' })
 <style scoped>
 .intro {
   color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.cta {
   margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid #334155;
+  border-radius: 0.75rem;
+}
+
+.cta p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
 }
 
 .nivel {
