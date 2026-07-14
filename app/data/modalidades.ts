@@ -40,7 +40,7 @@ export const modalidades: Modalidade[] = [
     ],
     tempoIdeal: '20 a 45 minutos por dia',
     caloriasPorMinuto: '5 a 9 kcal/min',
-    imagem: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
+    imagem: 'https://images.pexels.com/photos/3822188/pexels-photo-3822188.jpeg?auto=compress&cs=tinysrgb&w=800',
     altImagem: 'Pessoa fazendo exercício aeróbico em casa'
   },
   {
@@ -72,7 +72,7 @@ export const modalidades: Modalidade[] = [
     ],
     tempoIdeal: '20 a 40 minutos por dia',
     caloriasPorMinuto: '3 a 6 kcal/min',
-    imagem: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80',
+    imagem: 'https://images.pexels.com/photos/3822191/pexels-photo-3822191.jpeg?auto=compress&cs=tinysrgb&w=800',
     altImagem: 'Mulher praticando pilates em casa'
   },
   {
