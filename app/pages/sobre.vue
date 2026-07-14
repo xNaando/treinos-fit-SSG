@@ -3,7 +3,7 @@ const siteUrl = 'https://treinosfit.shop'
 
 useSeo({
   title: 'Sobre - Treinos em Casa',
-  description: 'Conheça o Treinos em Casa, um guia acessível para quem quer se exercitar sem academia ou equipamentos caros.',
+  description: 'Conheça o Treinos em Casa, um guia completo sobre exercícios físicos em casa, modalidades, benefícios e dicas para viver com mais saúde.',
   path: '/sobre'
 })
 
@@ -12,12 +12,12 @@ useJsonLd({
   '@type': 'AboutPage',
   name: 'Sobre o Treinos em Casa',
   url: `${siteUrl}/sobre`,
-  description: 'Guia acessível para quem quer se exercitar sem academia ou equipamentos caros.',
+  description: 'Guia completo sobre exercícios físicos em casa, modalidades e benefícios para a saúde.',
   mainEntity: {
     '@type': 'Organization',
     name: 'Treinos em Casa',
     url: siteUrl,
-    description: 'Guia completo de treinos em casa para todos os níveis.'
+    description: 'Guia completo sobre exercícios físicos em casa e modalidades para todos os níveis.'
   }
 })
 </script>
@@ -43,18 +43,18 @@ useJsonLd({
       <div class="sobre-content">
         <h1>Sobre o Treinos em Casa</h1>
         <p>
-          O <strong>Treinos em Casa</strong> é um guia simples e acessível para quem quer se exercitar
-          sem precisar de academia ou equipamentos caros.
+          O <strong>Treinos em Casa</strong> nasceu com um propósito claro: mostrar que cuidar da saúde não depende de academia, equipamentos caros ou muito tempo livre.
         </p>
         <p>
-          Nosso objetivo é democratizar o acesso à atividade física, oferecendo rotinas claras,
-          seguras e eficientes para todos os níveis: iniciante, intermediário e avançado.
+          Nosso objetivo é informar e inspirar pessoas a praticarem exercícios físicos em casa, apresentando as principais modalidades, seus benefícios e quanto de energia cada uma pode gastar a cada minuto de prática.
         </p>
         <p>
-          Todos os treinos podem ser feitos em casa, com o peso do próprio corpo e pouco espaço.
-          A consistência é mais importante do que a intensidade extrema.
+          Sabemos que o sedentarismo é um dos maiores inimigos da saúde moderna. Movimentar-se regularmente melhora o coração, fortalece os músculos, reduz o estresse, ajuda no sono e aumenta a disposição para o dia a dia.
         </p>
-        <CheckoutButton>Conheça o programa completo</CheckoutButton>
+        <p>
+          Aqui você encontra informações sobre zumba, aeróbica, musculação, pilates, yoga, HIIT e muitas outras formas de se exercitar sem sair de casa.
+        </p>
+        <CheckoutButton>Quero resultados mais rápidos</CheckoutButton>
       </div>
     </div>
   </section>

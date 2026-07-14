@@ -20,7 +20,7 @@
         </button>
         <div id="menu-links" class="links" :class="{ open: menuOpen }" role="menubar">
           <NuxtLink to="/" role="menuitem" @click="menuOpen = false">Início</NuxtLink>
-          <NuxtLink to="/treinos" role="menuitem" @click="menuOpen = false">Treinos</NuxtLink>
+          <NuxtLink to="/modalidades" role="menuitem" @click="menuOpen = false">Modalidades</NuxtLink>
           <NuxtLink to="/sobre" role="menuitem" @click="menuOpen = false">Sobre</NuxtLink>
           <CheckoutButton class="header-btn">Comprar agora</CheckoutButton>
         </div>
@@ -35,7 +35,7 @@
         <p class="footer-copy">© 2026 Treinos em Casa. Fique em forma sem sair de casa.</p>
         <nav class="footer-links" aria-label="Links do rodapé">
           <NuxtLink to="/">Início</NuxtLink>
-          <NuxtLink to="/treinos">Treinos</NuxtLink>
+          <NuxtLink to="/modalidades">Modalidades</NuxtLink>
           <NuxtLink to="/sobre">Sobre</NuxtLink>
         </nav>
       </div>

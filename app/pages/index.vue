@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { treinos } from '~/data/treinos'
+import { modalidades } from '~/data/modalidades'
 
 const siteUrl = 'https://treinosfit.shop'
 
 useSeo({
-  title: 'Treinos em Casa - Guia Completo de Exercícios sem Equipamento',
-  description: 'Descubra treinos em casa para todos os níveis. Sem academia, sem equipamento e sem desculpas. Comece hoje mesmo!',
+  title: 'Treinos em Casa - Descubra os Benefícios de se Exercitar em Casa',
+  description: 'Saiba por que fazer exercícios físicos em casa é essencial para a saúde. Conheça modalidades, benefícios e comece a cuidar do seu corpo hoje mesmo.',
   path: '/'
 })
 
@@ -14,10 +14,10 @@ useJsonLd({
   '@type': 'WebSite',
   name: 'Treinos em Casa',
   url: siteUrl,
-  description: 'Guia completo de treinos em casa para todos os níveis.',
+  description: 'Guia completo sobre os benefícios de treinar em casa e as melhores modalidades de exercício físico.',
   potentialAction: {
     '@type': 'SearchAction',
-    target: `${siteUrl}/treinos?q={search_term_string}`,
+    target: `${siteUrl}/modalidades?q={search_term_string}`,
     'query-input': 'required name=search_term_string'
   }
 })
@@ -28,10 +28,10 @@ useJsonLd({
     <div class="hero-content">
       <h1>Treinos em Casa</h1>
       <p class="subtitle">
-        Sem academia, sem equipamento e sem desculpas. Escolha um treino e comece hoje mesmo.
+        Cuidar da saúde não precisa de academia. Descubra como o exercício físico em casa pode transformar o seu corpo, a sua mente e a sua qualidade de vida.
       </p>
       <div class="hero-actions">
-        <NuxtLink to="/treinos" class="btn">Ver treinos</NuxtLink>
+        <NuxtLink to="/modalidades" class="btn">Conhecer modalidades</NuxtLink>
         <CheckoutButton>Quero resultados mais rápidos</CheckoutButton>
       </div>
     </div>
@@ -45,27 +45,56 @@ useJsonLd({
     />
   </section>
 
-  <section class="destaques" aria-labelledby="destaques-titulo">
-    <h2 id="destaques-titulo">Treinos em destaque</h2>
-    <p class="section-desc">Rotinas pensadas para quem quer treinar em casa com eficiência.</p>
+  <section class="beneficios" aria-labelledby="beneficios-titulo">
+    <h2 id="beneficios-titulo">Por que treinar em casa?</h2>
+    <p class="section-desc">
+      Praticar atividade física em casa é uma escolha prática, econômica e eficiente para quem quer viver com mais saúde.
+    </p>
     <div class="grid">
-      <article v-for="treino in treinos.slice(0, 3)" :key="treino.slug" class="card">
+      <article class="card">
+        <h3>Melhora a saúde cardiovascular</h3>
+        <p>Exercícios regulares fortalecem o coração, reduzem a pressão arterial e melhoram a circulação sanguínea.</p>
+      </article>
+      <article class="card">
+        <h3>Reduz o estresse e a ansiedade</h3>
+        <p>A prática física libera endorfinas, substâncias que promovem bem-estar e ajudam no equilíbrio emocional.</p>
+      </article>
+      <article class="card">
+        <h3>Ajuda no controle do peso</h3>
+        <p>Queimar calorias em casa é possível e eficiente, especialmente quando aliado a uma alimentação equilibrada.</p>
+      </article>
+      <article class="card">
+        <h3>Aumenta a disposição do dia a dia</h3>
+        <p>Quem se exercita regularmente sente mais energia, melhora a qualidade do sono e ganha produtividade.</p>
+      </article>
+      <article class="card">
+        <h3>Fortalece músculos e ossos</h3>
+        <p>Atividades de força e resistência ajudam a prevenir dores, lesões e doenças como a osteoporose.</p>
+      </article>
+      <article class="card">
+        <h3>Pode ser feito por qualquer pessoa</h3>
+        <p>Existem modalidades para todos os níveis e objetivos, sem necessidade de equipamentos caros.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="destaques" aria-labelledby="destaques-titulo">
+    <h2 id="destaques-titulo">Modalidades em destaque</h2>
+    <p class="section-desc">Conheça diferentes formas de treinar em casa e escolha a que combina com você.</p>
+    <div class="grid">
+      <article v-for="modalidade in modalidades.slice(0, 3)" :key="modalidade.slug" class="card">
         <img
-          :src="treino.imagem"
-          :alt="treino.altImagem"
+          :src="modalidade.imagem"
+          :alt="modalidade.altImagem"
           class="card-image"
           width="400"
           height="250"
           loading="lazy"
         />
         <div class="card-body">
-          <h3>{{ treino.titulo }}</h3>
-          <p class="meta">
-            <span class="nivel">{{ treino.nivel }}</span>
-            <span>{{ treino.duracao }}</span>
-          </p>
-          <p>{{ treino.descricao }}</p>
-          <NuxtLink :to="`/treinos/${treino.slug}`" class="btn" :aria-label="`Ver treino ${treino.titulo}`">Ver treino</NuxtLink>
+          <h3>{{ modalidade.nome }}</h3>
+          <p>{{ modalidade.resumo }}</p>
+          <NuxtLink :to="`/modalidades#${modalidade.slug}`" class="btn" :aria-label="`Saiba mais sobre ${modalidade.nome}`">Saiba mais</NuxtLink>
         </div>
       </article>
     </div>
@@ -73,8 +102,8 @@ useJsonLd({
 
   <section class="cta-final" aria-labelledby="cta-titulo">
     <h2 id="cta-titulo">Quer um plano completo para resultados mais rápidos?</h2>
-    <p>Acesse nosso programa completo de treinos em casa e transforme sua rotina.</p>
-    <CheckoutButton>Comprar agora</CheckoutButton>
+    <p>Acesse nosso programa completo de treinos em casa e comece a transformar sua rotina com orientação profissional.</p>
+    <CheckoutButton>Quero resultados mais rápidos</CheckoutButton>
   </section>
 </template>
 
@@ -122,10 +151,12 @@ useJsonLd({
   aspect-ratio: 16 / 9;
 }
 
+.beneficios,
 .destaques {
   padding: 2rem 0;
 }
 
+.beneficios h2,
 .destaques h2 {
   margin-bottom: 0.5rem;
 }
@@ -154,21 +185,16 @@ useJsonLd({
   margin-bottom: 0.75rem;
 }
 
-.meta {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+.card-body p {
   color: var(--color-muted);
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
 }
 
-.nivel {
-  background: var(--color-accent);
-  color: #fff;
-  padding: 0.125rem 0.5rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
+.beneficios .card {
+  padding: 1.5rem;
+}
+
+.beneficios .card p {
+  color: var(--color-muted);
 }
 
 .cta-final {
