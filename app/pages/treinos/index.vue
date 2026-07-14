@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { treinos } from '~/data/treinos'
 
-useHead({ title: 'Treinos' })
+useSeo({
+  title: 'Treinos em Casa - Escolha seu Treino Ideal',
+  description: 'Veja todos os treinos em casa para iniciantes, intermediários e avançados. Escolha o seu e comece hoje!',
+  path: '/treinos'
+})
 </script>
 
 <template>

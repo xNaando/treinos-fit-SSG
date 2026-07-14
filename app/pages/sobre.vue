@@ -1,5 +1,9 @@
 <script setup lang="ts">
-useHead({ title: 'Sobre' })
+useSeo({
+  title: 'Sobre - Treinos em Casa',
+  description: 'Conheça o Treinos em Casa, um guia acessível para quem quer se exercitar sem academia ou equipamentos caros.',
+  path: '/sobre'
+})
 </script>
 
 <template>

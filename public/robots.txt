@@ -1,2 +1,5 @@
 User-Agent: *
+Allow: /
 Disallow:
+
+Sitemap: https://xNaando.github.io/treinos-fit-SSG/sitemap.xml

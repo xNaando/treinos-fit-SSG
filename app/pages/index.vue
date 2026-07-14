@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { treinos } from '~/data/treinos'
 
-useHead({ title: 'Início' })
+useSeo({
+  title: 'Treinos em Casa - Guia Completo de Exercícios sem Equipamento',
+  description: 'Descubra treinos em casa para todos os níveis. Sem academia, sem equipamento e sem desculpas. Comece hoje mesmo!',
+  path: '/'
+})
 </script>
 
 <template>

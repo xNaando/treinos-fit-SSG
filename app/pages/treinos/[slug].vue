@@ -8,7 +8,11 @@ if (!treino) {
   throw createError({ statusCode: 404, statusMessage: 'Treino não encontrado' })
 }
 
-useHead({ title: treino.titulo })
+useSeo({
+  title: `${treino.titulo} - Treino em Casa`,
+  description: treino.descricao,
+  path: `/treinos/${treino.slug}`
+})
 </script>
 
 <template>
