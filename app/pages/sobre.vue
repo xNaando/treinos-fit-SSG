@@ -33,7 +33,7 @@ useJsonLd({
 
     <div class="sobre">
       <img
-        src="https://images.unsplash.com/photo-1552674605-5d2d96d6a16c?auto=format&fit=crop&w=900&q=80"
+        src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&w=900&q=80"
         alt="Pessoas treinando em casa de forma saudável"
         class="sobre-image"
         width="900"
