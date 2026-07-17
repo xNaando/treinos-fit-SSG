@@ -1,6 +1,5 @@
 <template>
   <div class="site">
-    <a href="#main" class="skip-link">Pular para o conteúdo</a>
     <header class="header">
       <nav class="nav" aria-label="Navegação principal">
         <NuxtLink to="/" class="logo" aria-label="Treinos em Casa - Início">
@@ -71,23 +70,6 @@ function toggleMenu() {
 
 html {
   scroll-behavior: smooth;
-}
-
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 1rem;
-  background: var(--color-accent);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  z-index: 100;
-  transition: top 0.2s;
-  text-decoration: none;
-}
-
-.skip-link:focus {
-  top: 1rem;
 }
 
 body {
